@@ -27,7 +27,7 @@ GROUP By ProductID;
 SELECT P.BusinessEntityID, T.Name as Territory_Name, 
 	PP.LastName, PP.FirstName
 FROM Sales.SalesPerson as P
-Join Sales.SalesTerritory as T
+LEFT OUTER JOIN Sales.SalesTerritory as T
 ON P.TerritoryID = T.TerritoryID
 JOIN Person.Person as PP
 On P.BusinessEntityID = PP.BusinessEntityID;
